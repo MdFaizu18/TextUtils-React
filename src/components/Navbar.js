@@ -25,21 +25,29 @@ export default function Navbar(props) {
           <li className="nav-item">
             <a className="nav-Link" href="/">Settings</a>
           </li>
-          {/* <li className="nav-item dropdown">
-            <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Info
-            </a>
-            <ul className="dropdown-menu">
-              <li><a className="dropdown-item" href="/">Action</a></li>
-              <li><a className="dropdown-item" href="/">Another action</a></li>
-              <li><hr className="dropdown-divider"/></li>
-              <li><a className="dropdown-item" href="/">Something else here</a></li>
-            </ul>
-          </li>*/}
 
-             
-        
         </ul> 
+
+
+
+        <div className="d-flex">
+          <div className="bg-primary rounded mx-2" onClick={()=>{props.toggleMode('primary')}} style={{height:'30px', width:'30px'}}>
+          </div>
+        </div>
+        <div className="d-flex">
+          <div className="bg-success rounded mx-2" onClick={()=>{props.toggleMode('success')}} style={{height:'30px', width:'30px'}}>
+          </div>
+        </div>
+        <div className="d-flex">
+          <div className="bg-warning rounded mx-2" onClick={()=>{props.toggleMode('warning')}} style={{height:'30px', width:'30px'}}>
+          </div>
+        </div>
+        <div className="d-flex">
+          <div className="bg-danger rounded mx-2" onClick={()=>{props.toggleMode('danger')}} style={{height:'30px', width:'30px'}}>
+          </div>
+        </div>
+
+
         <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
                <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
                <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Dark Mode</label>
